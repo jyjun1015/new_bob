@@ -32,14 +32,14 @@ def getCapture() :   # 반복적으로 화면 캡쳐를 얻는 함수
         cap = 0
         while True:
             # 0.3 second per once
-            time.sleep(0.3)
+            # time.sleep(0.3)
             _, img = camera.read()
             img = img[:,280:1000,:]
             cv2.imshow("img",img)
             
         # 외부 통신 삽입 자리
             cap += 1
-            cv2.imwrite("NewFile1/"+str(cap)+".jpg", img)
+            # cv2.imwrite("NewFile1/"+str(cap)+".jpg", img)
 
         # time.sleep(0.1)        #시작 전 여기 수정
         # camera.frames_displayed += 1
